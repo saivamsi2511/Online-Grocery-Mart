@@ -1,0 +1,89 @@
+.main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #94d6fd 0%, #addbc8 100%);
+  padding: 1rem 2rem;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 8px 26px rgba(26, 110, 90, 0.06);
+  gap: 1.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+  border-bottom-color: #4CAF50;
+  cursor: pointer;
+}
+
+.nav-auth {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  padding: 10px 24px;
+  border-radius: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.plain {
+  background: none;
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.nav-btn.plain:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.nav-btn.filled {
+  background: #4CAF50;
+  color: white;
+}
+
+.nav-btn.filled:hover {
+  background: #45a049;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
+}

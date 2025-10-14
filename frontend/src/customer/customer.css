@@ -1,0 +1,264 @@
+/* Layout and fonts */
+.grocery-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+}
+
+/* --- LIGHT & FRESH SIDEBAR STYLES --- */
+.grocery-sidebar {
+  width: 220px;
+  background-color: #f0f7f2; /* A fresh, light green background */
+  border-right: 1px solid #dee2e6;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.grocery-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* This ensures consistent spacing */
+}
+
+/* In src/customer/customer.css */
+
+.grocery-sidebar li {
+  /* Use Flexbox to align icon and text */
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* Space between icon and text */
+  
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-weight: 500; /* Slightly lighter weight for a cleaner look */
+  color: #343a40;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.grocery-sidebar li:hover {
+  background-color: #e1ece6;
+  color: #000;
+}
+
+
+/* Main content */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Banner styles */
+.banner-carousel {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.banner-carousel img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Horizontal carousel */
+.horizontal-carousel {
+  margin-bottom: 40px;
+}
+
+.horizontal-carousel h2 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Scrollbar styling */
+.carousel-wrapper {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff7a00 #f1f1f1;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ff7a00;
+  border-radius: 4px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Product card */
+.carousel-card {
+  flex: 0 0 auto;
+  width: 160px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.carousel-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+/* Buttons */
+.carousel-card button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-card button:hover {
+  background-color: #e76f00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grocery-layout {
+    flex-direction: column;
+  }
+  .grocery-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    text-align: center;
+  }
+  main {
+    padding: 12px;
+  }
+  .carousel-wrapper {
+    padding-bottom: 20px;
+  }
+}
+/* --- CART ICON STYLES --- */
+
+.cart-link {
+  padding: 0 !important; /* Override default link padding */
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px; /* Re-apply padding here */
+}
+
+.cart-icon {
+  font-size: 1.5rem; /* Makes the cart icon bigger */
+  color: white;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dc3545; /* Red color for the badge */
+  color: white;
+  border-radius: 50%; /* Makes it a circle */
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid white; /* Adds a nice border */
+  transform: translate(25%, -25%); /* Positions it perfectly on the corner */
+}
+/* --- CART ICON STYLES --- */
+
+.cart-link {
+  padding: 0 !important; /* Override default link padding to ensure proper alignment */
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px; /* Re-apply padding here for the click area */
+}
+
+.cart-icon {
+  font-size: 1.5rem; /* Makes the cart icon bigger */
+  color: white;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dc3545; /* Red color for the badge */
+  color: white;
+  border-radius: 50%; /* Makes it a circle */
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid white;
+  transform: translate(25%, -25%); /* Positions it perfectly on the corner */
+}
+/* Add these styles to your src/customer/customer.css file */
+
+.cart-popover-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-summary {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+
+.cart-summary .MuiTypography-subtitle1 {
+  font-weight: bold;
+}

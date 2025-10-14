@@ -1,0 +1,118 @@
+.shop-layout {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+/* --- PROFESSIONAL SIDEBAR STYLES --- */
+.shop-sidebar {
+  flex: 0 0 240px;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.shop-sidebar h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-top: 0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.shop-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shop-sidebar li {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+
+.shop-sidebar li:hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.shop-sidebar li.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 700;
+}
+/* --- END OF SIDEBAR STYLES --- */
+
+.product-grid-container {
+  flex-grow: 1;
+}
+
+.product-grid-container h2 {
+  margin-top: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #343a40;
+  margin: 0 0 15px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
