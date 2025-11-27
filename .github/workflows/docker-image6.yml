@@ -1,0 +1,33 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - uses: actions/checkout@v4
+
+      # Step 2: Login to Docker Hub
+      - name: Docker Login
+        uses: docker/login-action@v3.6.0
+        with:
+          username: saivamsiyadav6        # Your Docker Hub username
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Access token saved in GitHub secret
+          logout: true
+
+      # Step 3: Build Docker image
+      - name: Build Docker Image
+        run: |
+          docker build . -f Dockerfile -t saivamsiyadav6/actions-demo:1.0
+
+      # Step 4: Push Docker image
+      - name: Push Docker Image
+        run: |
+          docker push saivamsiyadav6/actions-demo:1.0
